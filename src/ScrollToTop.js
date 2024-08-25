@@ -18,16 +18,17 @@ function    ScrollToTop (){
 
  
 
-
+ //
     
 return (
-    <div className="grid h-screen bg-black place-items-center">
-         <div className="bg-gray-100 relative rounded-t-md   w-330 h-150" >
+  
+    <div className=" bg-gray-100 overflow-hidden max-h-full overflow-y-scroll h-screen  ">
+ 
      <Header/> 
     <Outlet    />
     <Side/>
  
-    </div>
+ 
     </div>
 )
 

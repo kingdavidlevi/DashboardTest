@@ -1,3 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.green{
+    background-color: #036765;
+    
+}
+
+.green1{
+    background-color: #006D5B;
+}

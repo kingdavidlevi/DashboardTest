@@ -53,7 +53,8 @@
         },
         
         borderWidth: {
-          r: "0.1px"
+          r: "0.1px",
+          3 : "3px"
         },
         
         screens : {
@@ -89,7 +90,12 @@
         
         },
   
-       
+       maxHeight:{
+        150: "520px"
+       },
+       maxWidth:{
+        330: "960px"
+       },
   
         fontWeight:{
           semi:'500px'

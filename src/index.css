@@ -2,3 +2,18 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+
+
+.green{
+    background-color: #047472;
+}
+
+.alldivs{
+    border-right: 3px solid  #047472 ;
+}
+
+.greentext{
+    color:  #047472;
+}
