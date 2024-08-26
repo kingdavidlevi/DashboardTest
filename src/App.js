@@ -1,15 +1,18 @@
 import ScrollToTop from "./ScrollToTop";
  
- 
 import {  Route, Routes, RouterProvider,createBrowserRouter,createRoutesFromElements } from "react-router-dom";
 import Homepage from "./Homepage";
+import MoneyTrasactions from "./MoneyTrasactions";
 
  const router = createBrowserRouter(createRoutesFromElements(
  
     
   <Route  element={<ScrollToTop/>} >
     
-<Route path="/" element={<Homepage/>}/>
+<Route  element={<Homepage/>}>
+<Route path="/" element={<MoneyTrasactions/>}/>
+
+</Route>
 </Route>
 
  

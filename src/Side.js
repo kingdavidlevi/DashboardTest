@@ -1,13 +1,37 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {FaArrowLeft, FaAmazon, FaWallet,FaCheckSquare,FaCheck,FaSquareFull,FaWaveSquare,FaUser } from "react-icons/fa";
 
  
 
 function Side(){
-    const [firstDiv, setFirstDiv] = useState(false)
-    const [secondDiv, setSecondDiv] = useState(false)
-    const [thirdDiv, setThirdDiv] = useState(false)
-    const [lastDiv, setLastDiv] = useState(false)
+
+  // Load initial state from localStorage or default to false
+  const [firstDiv, setFirstDiv] = useState(() => JSON.parse(localStorage.getItem('firstDiv')) || false);
+  const [secondDiv, setSecondDiv] = useState(() => JSON.parse(localStorage.getItem('secondDiv')) || false);
+  const [thirdDiv, setThirdDiv] = useState(() => JSON.parse(localStorage.getItem('thirdDiv')) || false);
+  const [lastDiv, setLastDiv] = useState(() => JSON.parse(localStorage.getItem('lastDiv')) || false);
+
+  // Save the current state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('firstDiv', JSON.stringify(firstDiv));
+  }, [firstDiv]);
+
+  useEffect(() => {
+    localStorage.setItem('secondDiv', JSON.stringify(secondDiv));
+  }, [secondDiv]);
+
+  useEffect(() => {
+    localStorage.setItem('thirdDiv', JSON.stringify(thirdDiv));
+  }, [thirdDiv]);
+
+  useEffect(() => {
+    localStorage.setItem('lastDiv', JSON.stringify(lastDiv));
+  }, [lastDiv]);
+
+   
+
+ 
+  
      const firstBtn = () => {
        setFirstDiv(true)
        setSecondDiv(false)
