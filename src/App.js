@@ -3,7 +3,7 @@ import ScrollToTop from "./ScrollToTop";
 import {  Route, Routes, RouterProvider,createBrowserRouter,createRoutesFromElements } from "react-router-dom";
 import Homepage from "./Homepage";
 import MoneyTrasactions from "./MoneyTrasactions";
-
+import Side from "./Side";
  const router = createBrowserRouter(createRoutesFromElements(
  
     
@@ -13,6 +13,7 @@ import MoneyTrasactions from "./MoneyTrasactions";
 <Route path="/" element={<MoneyTrasactions/>}/>
 
 </Route>
+
 </Route>
 
  

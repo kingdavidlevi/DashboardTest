@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { FaCaretDown } from "react-icons/fa6";
+import Trasactions from "./Transactions";
 function MoneyTrasactions(){
     const [main, setMain] = useState("378,032")
     return(
+        <>
         <section className="bg-white w-95% over mt-10 flex justify-between">
  <section className="rounded-md pt-4  lg:w-72 h-44 grid place-content-center  xl:w-80   ">
   
@@ -40,7 +42,7 @@ function MoneyTrasactions(){
   
   <section>
       <div className="">
-  <p className="font-medium text-black text-base">Total trasactions</p>
+  <p className="font-medium text-black text-base">Total transactions</p>
  
   </div>
   <div className="mt-3   gap-4 relative flex">
@@ -52,6 +54,9 @@ function MoneyTrasactions(){
 
 </section>
         </section>
+        <Trasactions/>
+
+        </>
     )
 }
 

@@ -54,7 +54,7 @@ function Headerhomepage(){
         </div>
     </div>
     <div className="mt-5 relative   flex">
-   <p className=" flex text-4xl font-medium text-white"> <span>N</span> <input disabled={true}  type={`${mainview ? "password" : "text"}`} className="green w-32 outline-none text-white text-4xl border-none" value={main}/></p><span className="text-green-500 font-medium absolute right-4 xl:right-12 mt-1.5 text-3xl">.00</span>
+   <p className=" flex text-4xl font-medium text-white"> <span>N</span> <input disabled={true}  type={`${mainview ? "password" : "text"}`} className="green w-32 outline-none mt-1 text-white text-4xl border-none" value={main}/></p><span className="text-green-500 font-medium absolute right-4 xl:right-12 mt-1.5 text-3xl">.00</span>
     </div>
     <div className="mt-5 relative flex gap-1 text-white">
     <input disabled={true} type="text" className="border-none w-22 text-sm text-white outline-none green " value={copy}/>

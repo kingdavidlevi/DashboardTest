@@ -1,35 +1,17 @@
 import { useState,useEffect } from "react";
 import {FaArrowLeft, FaAmazon, FaWallet,FaCheckSquare,FaCheck,FaSquareFull,FaWaveSquare,FaUser } from "react-icons/fa";
+import { useOutletContext } from "react-router-dom";
 
+  // 
+
+function Side({ firstDiv, setFirstDiv, secondDiv, setSecondDiv, thirdDiv, setThirdDiv, lastDiv, setLastDiv }){
+
+ // const  {firstDiv, setFirstDiv,secondDiv, setSecondDiv,thirdDiv, setThirdDiv,lastDiv, setLastDiv} = useOutletContext() 
+ // Save the current state to localStorage whenever it changes
+
+ //const context = useOutletContext();
  
-
-function Side(){
-
-  // Load initial state from localStorage or default to false
-  const [firstDiv, setFirstDiv] = useState(() => JSON.parse(localStorage.getItem('firstDiv')) || false);
-  const [secondDiv, setSecondDiv] = useState(() => JSON.parse(localStorage.getItem('secondDiv')) || false);
-  const [thirdDiv, setThirdDiv] = useState(() => JSON.parse(localStorage.getItem('thirdDiv')) || false);
-  const [lastDiv, setLastDiv] = useState(() => JSON.parse(localStorage.getItem('lastDiv')) || false);
-
-  // Save the current state to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem('firstDiv', JSON.stringify(firstDiv));
-  }, [firstDiv]);
-
-  useEffect(() => {
-    localStorage.setItem('secondDiv', JSON.stringify(secondDiv));
-  }, [secondDiv]);
-
-  useEffect(() => {
-    localStorage.setItem('thirdDiv', JSON.stringify(thirdDiv));
-  }, [thirdDiv]);
-
-  useEffect(() => {
-    localStorage.setItem('lastDiv', JSON.stringify(lastDiv));
-  }, [lastDiv]);
-
-   
-
+ 
  
   
      const firstBtn = () => {
@@ -87,7 +69,7 @@ function Side(){
             <div className= "flex gap-3  relative pl-8 h-14 items-center text-black cursor-pointer" onClick={thirdBtn} >
       <FaSquareFull className="rounded-sm text-white border-r border-black"/>
 
-        <p className="text-sm font-normal ">Trasactions</p>
+        <p className="text-sm font-normal ">Transactions</p>
         <div className="absolute w-1.5 bg-white border-r border-black  h-1.5 left-10 ml-1 top-4 mt-0.5   rounded-full "></div>
             </div>} 
          {lastDiv ? (  <div className="flex gap-3 rounded-tl-md rounded-bl-md pl-8 h-14 items-center border-r-3  alldivs text-green-600 bg-green-100"  >
