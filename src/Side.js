@@ -1,30 +1,28 @@
 import { useState,useEffect } from "react";
 import {FaArrowLeft, FaAmazon, FaWallet,FaCheckSquare,FaCheck,FaSquareFull,FaWaveSquare,FaUser } from "react-icons/fa";
-import { useOutletContext } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
   // 
 
 function Side({ firstDiv, setFirstDiv, secondDiv, setSecondDiv, thirdDiv, setThirdDiv, lastDiv, setLastDiv }){
 
- // const  {firstDiv, setFirstDiv,secondDiv, setSecondDiv,thirdDiv, setThirdDiv,lastDiv, setLastDiv} = useOutletContext() 
- // Save the current state to localStorage whenever it changes
+  const navigate = useNavigate()
 
- //const context = useOutletContext();
- 
- 
- 
   
      const firstBtn = () => {
        setFirstDiv(true)
        setSecondDiv(false)
        setThirdDiv(false)
        setLastDiv(false)
+       navigate('/')
+       
      }
      const secondBtn = () => {
         setSecondDiv(true)
        setFirstDiv(false)
        setThirdDiv(false)
        setLastDiv(false)
+       navigate('/Wallet')
      }
      const thirdBtn = () => {
         setSecondDiv(false)

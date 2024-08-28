@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { FaCaretDown } from "react-icons/fa6";
 import Trasactions from "./Transactions";
+import Headerhomepage from "./Headerhomepage";
 function MoneyTrasactions(){
     const [main, setMain] = useState("378,032")
     return(
         <>
+         
         <section className="bg-white w-95% over mt-10 flex justify-between">
  <section className="rounded-md pt-4  lg:w-72 h-44 grid place-content-center  xl:w-80   ">
   
@@ -54,7 +56,7 @@ function MoneyTrasactions(){
 
 </section>
         </section>
-        <Trasactions/>
+        
 
         </>
     )

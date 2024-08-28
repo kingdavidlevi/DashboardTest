@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
  
 import { FaEye,FaEyeSlash,FaCopy,FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-function Headerhomepage(){
-    const {firstDiv,setFirstDiv,secondDiv,setSecondDiv,thirdDiv,setThirdDiv,lastDiv,setLastDiv} = useOutletContext()
+function WalletHeader(){
     const [main, setMain] = useState("378,032")
     const [copy, setCopy] = useState("XDOB3...9452")
     const [mainview,setMainview] = useState(false)
@@ -39,14 +37,8 @@ function Headerhomepage(){
           })
           .catch(err => console.error('Failed to copy text: ', err));
       }
-   const navigateToWallet = () => {
-    setSecondDiv(true)
-    setFirstDiv(false)
-    setThirdDiv(false)
-    setLastDiv(false)
-    navigate('/Wallet')
-   }
-       
+
+     
     return(
         <section >
             <h1 className="text-black text-lg font-medium">Overview</h1>
@@ -85,7 +77,7 @@ function Headerhomepage(){
     {copied && <p className="absolute font-medium text-xs right-16 xl:right-24 bottom-3 text-white">Copied!</p>}
     </div>
  </section>
- <section className="rounded-md   grid place-items-center lg:w-72 w-70 xl:w-80 cursor-pointer pl-10 pr-8 bg-gray-200" onClick={navigateToWallet}>
+ <section className="rounded-md   grid place-items-center lg:w-72 w-70 xl:w-80 pl-10 pr-8 cursor-pointer bg-gray-200">
     <div className=" flex gap-3 items-center  justify-center">
        <section><FaPlus className="text-gray-400"/></section>
        <p className="text-base font-medium text-gray-400">Add Wallet</p>  
@@ -97,4 +89,4 @@ function Headerhomepage(){
         </section>
     )
 }
-export default Headerhomepage;
+export default WalletHeader;

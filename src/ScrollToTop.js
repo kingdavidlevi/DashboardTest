@@ -50,7 +50,7 @@ function ScrollToTop({ title }) {
 
     return (
         <div className="bg-gray-100 overflow-hidden max-h-full overflow-y-scroll h-screen">
-            <Outlet />
+            <Outlet context={{firstDiv,setFirstDiv,secondDiv,setSecondDiv,thirdDiv,setThirdDiv,lastDiv,setLastDiv}} />
             <Side
                 title={title}
                 firstDiv={firstDiv}

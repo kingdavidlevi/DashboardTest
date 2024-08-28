@@ -2,7 +2,7 @@ import Avatar from './images/vecteezy_man-avatar-clipart-illustration_9397835.pn
 
 function Trasactions(){
     return(
-        <section className="pl-70 mb-4 w-95% mt-10">
+        <section className="pl-70 mb-14 w-95% mt-10">
           <p className=' text-lg font-medium text-black'>Transactions</p>
           <section className="flex py-3 pl-8 mt-3 justify-between bg-white full">
           <div className="  w-80 ">
@@ -26,7 +26,7 @@ function Trasactions(){
 
           <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
           <div className="  xl:w-80 lg:w-75  flex gap-4">
-          <section className='h-9 ml-6 relative w-9 grid place-items-center cursor-pointer rounded-full bg-green-300'>
+          <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
     </section>
          <section >
@@ -53,7 +53,7 @@ function Trasactions(){
 
           <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-gray-100 full">
           <div className="  xl:w-80 lg:w-75  flex gap-4">
-          <section className='h-9 ml-6 relative w-9 grid place-items-center cursor-pointer rounded-full bg-green-300'>
+          <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
     </section>
          <section >
@@ -79,7 +79,7 @@ function Trasactions(){
 
    <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
    <div className="  xl:w-80 lg:w-75  flex gap-4">
-          <section className='h-9 ml-6 relative w-9 grid place-items-center cursor-pointer rounded-full bg-green-300'>
+          <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
     </section>
          <section >
@@ -107,7 +107,7 @@ function Trasactions(){
 
           <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
           <div className="  xl:w-80 lg:w-75  flex gap-4">
-          <section className='h-9 ml-6 relative w-9 grid place-items-center cursor-pointer rounded-full bg-green-300'>
+          <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
     </section>
          <section >
@@ -134,7 +134,7 @@ function Trasactions(){
 
           <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
           <div className="  xl:w-80 lg:w-75  flex gap-4">
-          <section className='h-9 ml-6 relative w-9 grid place-items-center cursor-pointer rounded-full bg-green-300'>
+          <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
     </section>
          <section >
