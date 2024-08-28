@@ -2,7 +2,7 @@ import Avatar from './images/vecteezy_man-avatar-clipart-illustration_9397835.pn
 
 function Trasactions(){
     return(
-        <section className="pl-70 mb-14 w-95% mt-10">
+        <section className="pl-72  mb-14 w-96% mt-10">
           <p className=' text-lg font-medium text-black'>Transactions</p>
           <section className="flex py-3 pl-8 mt-3 justify-between bg-white full">
           <div className="  w-80 ">

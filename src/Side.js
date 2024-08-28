@@ -22,13 +22,14 @@ function Side({ firstDiv, setFirstDiv, secondDiv, setSecondDiv, thirdDiv, setThi
        setFirstDiv(false)
        setThirdDiv(false)
        setLastDiv(false)
-       navigate('/Wallet')
+       navigate('Wallet')
      }
      const thirdBtn = () => {
         setSecondDiv(false)
         setFirstDiv(false)
         setThirdDiv(true)
         setLastDiv(false)
+        navigate('Transactions')
      }
      const lastBtn = () => {
         setSecondDiv(false)

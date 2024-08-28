@@ -6,15 +6,15 @@ import Trasactions from "./Transactions";
 function Homepage(){
 
     return(
-        <div>
-            <Header/>
-        <section className="pl-72  w-full mt-36">
+        <>
+           
+        <section className="pl-72  w-full ">
       <Headerhomepage/>
       <MoneyTrasactions/>
-      <Trasactions/>
   
  </section>
- </div>
+ <Trasactions/>
+ </>
     )
 }
 export default Homepage;
