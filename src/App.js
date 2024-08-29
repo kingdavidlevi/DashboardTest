@@ -6,6 +6,7 @@ import {  Route, Routes, RouterProvider,createBrowserRouter,createRoutesFromElem
 import Homepage from "./Homepage";
 import Headerhomepage from "./Headerhomepage";
 import CreateWalletTag from "./CreateWalletTag";
+import GenerateWalletId from "./GenerateWalletId";
  
  const router = createBrowserRouter(createRoutesFromElements(
  
@@ -18,6 +19,7 @@ import CreateWalletTag from "./CreateWalletTag";
 <Route path="Wallet" element={<Wallet/>}/>
 <Route path="Transactions" element={<Transactions/>} />
 <Route path="CreateWalletTag" element={<CreateWalletTag/>}/>
+<Route path="GenerateWalletId" element={<GenerateWalletId/>}/>
 </Route>
 <Route path="Headerhomepage" element={<Headerhomepage/>}/>
 

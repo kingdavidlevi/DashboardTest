@@ -11,6 +11,9 @@ input:focus{
 .rightb{
     border-right: 1px solid #047472; 
 }
+.fullgreen{
+    border: 1px solid #047472; 
+}
 .over{
     border-bottom: 1px solid #047472; 
 }
