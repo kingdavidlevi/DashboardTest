@@ -5,16 +5,7 @@ import Rocket from "./images/—Pngtree—rocket launch in 3d rendering_3710025.
 
 
 
-/*<div className="flex justify-between">
-<div className="bg-gray-300 flex justify-center gap-2 w-52 py-2">
-    <FaWallet/>
-    <p className="text-black text-base font-normal">Successfully Generate Wallet ID</p>
-    </div>
-    <div className="flex gap-2 justify-center">
-        <FaCopy/>
-      <p>Copy wallet ID</p>
-    </div>
-</div>*/
+ 
 function GenerateWalletId(){
     const [hide,sethide] = useState(false)
     const navigate = useNavigate()
@@ -23,6 +14,10 @@ function GenerateWalletId(){
     }
     const showhide = () => {
      sethide(prevstate => !prevstate)
+    }
+
+    const continuefunction = () =>{
+      navigate('/FundWallet')
     }
     return(
         <>
@@ -96,7 +91,7 @@ function GenerateWalletId(){
       </section>
 
       <section className="mt-8"><img src={Rocket} className="xl:w-270 rounded-md h-60 w-260"/></section>
-      <button className="text-white mt-8 py-3 xl:w-270 w-260 green text-base font-medium rounded-md " >Continue</button>
+      <button className="text-white mt-8 py-3 xl:w-270 w-260 green text-base font-medium rounded-md " onClick={continuefunction}>Continue</button>
 
         </section>
       
