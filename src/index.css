@@ -20,6 +20,9 @@ input:focus{
 .greenfade{
     background-color: #6ec1c0;
 }
+.greenfadetext{
+    color: #6ec1c0;
+}
 .green{
     background-color: #047472;
 }
@@ -30,4 +33,43 @@ input:focus{
 
 .greentext{
     color:  #047472;
+}
+
+
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox span {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid  #047472;
+    display: inline-block;
+    vertical-align: middle;
+    background-color:white ;
+    position: relative;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + span {
+    border: none;
+    background-color: #047472;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + span::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 10px;
+    height: 15px;
+    border:solid   white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(40deg);
 }

@@ -9,6 +9,9 @@ function Wallet (){
     const CreateNewWallet = () =>{
         navigate('/CreateWalletTag')
     }
+    const FundingCard = () =>{
+        navigate('/FundingCard')
+    }
 
     return(
         <>
@@ -23,7 +26,7 @@ function Wallet (){
                 </section>
                 <section><FaGreaterThan/></section>
             </div>
-            <div className="bg-white px-5 cursor-pointer mt-2 rounded-md h-14 items-center flex justify-between">
+            <div className="bg-white px-5 cursor-pointer mt-2 rounded-md h-14 items-center flex justify-between" onClick={FundingCard}>
                 <section className="flex items-center gap-3">
                 <FaWallet className="greentext" />
                 <p className="text-base font-medium">Fund Wallet</p>  
