@@ -7,11 +7,15 @@ function OverAll({ title }) {
     const location = useLocation();
 
     // Safely initialize state by checking if the value exists in localStorage before parsing
+    
     const [firstDiv, setFirstDiv] = useState(() => {
         const saved = localStorage.getItem('firstDiv');
         return saved !== null ? JSON.parse(saved) : false;
     });
 
+    useEffect(() => {
+  setFirstDiv(true)
+    },[])
     const [secondDiv, setSecondDiv] = useState(() => {
         const saved = localStorage.getItem('secondDiv');
         return saved !== null ? JSON.parse(saved) : false;
