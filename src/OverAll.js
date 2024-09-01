@@ -13,9 +13,7 @@ function OverAll({ title }) {
         return saved !== null ? JSON.parse(saved) : false;
     });
 
-    useEffect(() => {
-  setFirstDiv(true)
-    },[])
+ 
     const [secondDiv, setSecondDiv] = useState(() => {
         const saved = localStorage.getItem('secondDiv');
         return saved !== null ? JSON.parse(saved) : false;
