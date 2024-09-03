@@ -5,35 +5,10 @@ import Side from "./Side";
 
 function OverAll({ title }) {
     const location = useLocation();
-
+    const isTransactionRoute = location.pathname === "/Transaction";
     // Safely initialize state by checking if the value exists in localStorage before parsing
     
-    useEffect(() => {
-        // Set a flag in sessionStorage when the page loads
-        sessionStorage.setItem('isReloading', 'true');
-    
-        const handleBeforeUnload = () => {
-            // Clear the sessionStorage flag just before the page unloads
-            sessionStorage.removeItem('isReloading');
-        };
-    
-        const handleUnload = () => {
-            // Check if the flag is still in sessionStorage
-            if (sessionStorage.getItem('isReloading')) {
-                // The flag exists, so the window is being closed
-                localStorage.clear();
-            }
-        };
-    
-        window.addEventListener('beforeunload', handleBeforeUnload);
-        window.addEventListener('unload', handleUnload);
-    
-        // Cleanup event listeners
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-            window.removeEventListener('unload', handleUnload);
-        };
-    }, []);
+  
     
     const [firstDiv, setFirstDiv] = useState(() => {
         const saved = localStorage.getItem('firstDiv');
@@ -50,6 +25,8 @@ function OverAll({ title }) {
         const saved = localStorage.getItem('thirdDiv');
         return saved !== null ? JSON.parse(saved) : false;
     });
+
+    
 
     const [lastDiv, setLastDiv] = useState(() => {
         const saved = localStorage.getItem('lastDiv');

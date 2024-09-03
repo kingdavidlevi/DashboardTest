@@ -1,35 +1,74 @@
 import { useState,useEffect } from "react";
 import {FaArrowLeft, FaAmazon, FaWallet,FaCheckSquare,FaCheck,FaSquareFull,FaWaveSquare,FaUser } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 
   // 
 
 function Side({ firstDiv, setFirstDiv, secondDiv, setSecondDiv, thirdDiv, setThirdDiv, lastDiv, setLastDiv }){
-
+    const location = useLocation();
+    const isTransactionRoute = location.pathname === "Transaction";
+    const ishomeRoute = location.pathname === "/"
+    const iswalletRoute = location.pathname === "Wallet"
   const navigate = useNavigate()
 
+       useEffect(()=> {
+        if (ishomeRoute){
+            setFirstDiv(true)
+            setSecondDiv(false)
+            setThirdDiv(false)
+            setLastDiv(false)
+            
+         }
+       },[])
+
+       useEffect(() => {   
+         if (iswalletRoute){
+        setSecondDiv(true)
+       setFirstDiv(false)
+       setThirdDiv(false)
+       setLastDiv(false)
        
+     }
+    },[])
+
+    useEffect(() => {
+        if(isTransactionRoute){
+            setSecondDiv(false)
+            setFirstDiv(false)
+            setThirdDiv(true)
+            setLastDiv(false)
+            
+        }
+    },[])
+
      const firstBtn = () => {
+       
        setFirstDiv(true)
        setSecondDiv(false)
        setThirdDiv(false)
        setLastDiv(false)
        navigate('/')
+    
        
      }
+
      const secondBtn = () => {
+       
         setSecondDiv(true)
        setFirstDiv(false)
        setThirdDiv(false)
        setLastDiv(false)
        navigate('Wallet')
+    
      }
      const thirdBtn = () => {
+         
         setSecondDiv(false)
         setFirstDiv(false)
         setThirdDiv(true)
         setLastDiv(false)
         navigate('Transactions')
+    
      }
      const lastBtn = () => {
         setSecondDiv(false)
