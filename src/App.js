@@ -9,6 +9,7 @@ import CreateWalletTag from "./CreateWalletTag";
 import GenerateWalletId from "./GenerateWalletId";
 import FundWallet from "./FundWallet";
 import FundingCard from "./FundingCard";
+import SendMoney from "./SendMoney";
  import ConfirmTransaction from "./ConfirmTransaction";
  const router = createBrowserRouter(createRoutesFromElements(
  
@@ -25,6 +26,7 @@ import FundingCard from "./FundingCard";
 <Route path="FundWallet" element={<FundWallet/>}/>
 <Route path="FundingCard" element={<FundingCard/>} />
 <Route path="ConfirmTransaction" element={<ConfirmTransaction/>}/>
+<Route path="SendMoney" element={<SendMoney/>}/>
 
 </Route>
 <Route path="Headerhomepage" element={<Headerhomepage/>}/>

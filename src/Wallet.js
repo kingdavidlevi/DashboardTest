@@ -12,7 +12,9 @@ function Wallet (){
     const FundingCard = () =>{
         navigate('/FundingCard')
     }
-
+    const Sendmoney = () => {
+     navigate('/SendMoney')
+    }
     return(
         <>
          
@@ -33,7 +35,7 @@ function Wallet (){
                 </section>
                 <section><FaGreaterThan/></section>
             </div>
-            <div className="bg-white px-5 cursor-pointer mt-2 rounded-md h-14 items-center flex justify-between">
+            <div className="bg-white px-5 cursor-pointer mt-2 rounded-md h-14 items-center flex justify-between" onClick={Sendmoney}>
                 <section className="flex items-center gap-3">
                 <FaPaperPlane className="greentext"/>
                 <p className="text-base font-medium">Send Money</p>  

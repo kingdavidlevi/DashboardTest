@@ -31,7 +31,7 @@ function ConfirmTransaction (){
         <p className="text-base text-gray-400 font-normal">Sub Total</p>
         <p className="text-black font-normal">N21,300.00</p>
        </section>
-            <button className="text-white mt-8 py-3 xl:w-270 w-260 green text-base font-medium rounded-md " >Continue</button>
+            <button className="text-white mt-12 py-3 xl:w-270 w-260 green text-base font-medium rounded-md " >Continue</button>
         </section>
         </div>
     )

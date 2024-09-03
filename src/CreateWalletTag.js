@@ -5,10 +5,14 @@ function CreateWalletTag (){
   const GenerateId = () => {
    navigate('/GenerateWalletId')
   }
+
+  const back = () => {
+    navigate('/Wallet')
+  }
     return(
       <div>
         <section className="pl-72 z-40 absolute top-16">
-      <FaArrowLeft className=" cursor-pointer "/>
+      <FaArrowLeft className=" cursor-pointer " onClick={back}/>
       </section>
         <section className="w-full grid place-items-center">
        <div className="xl:w-270 w-260 "><p className="text-lg font-medium text-black">Create New Wallet</p></div>

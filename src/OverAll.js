@@ -8,6 +8,23 @@ function OverAll({ title }) {
 
     // Safely initialize state by checking if the value exists in localStorage before parsing
     
+    useEffect(() => {
+        const handleUnload = (event) => {
+            // Check if the event is triggered by closing the window, not by a page reload
+            if (event.type === 'unload') {
+                localStorage.clear();
+            }
+        };
+    
+        window.addEventListener('unload', handleUnload);
+    
+        // Cleanup the event listener
+        return () => {
+            window.removeEventListener('unload', handleUnload);
+        };
+    }, []);
+
+    
     const [firstDiv, setFirstDiv] = useState(() => {
         const saved = localStorage.getItem('firstDiv');
         return saved !== null ? JSON.parse(saved) : false;

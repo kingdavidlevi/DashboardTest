@@ -8,7 +8,7 @@ function Side({ firstDiv, setFirstDiv, secondDiv, setSecondDiv, thirdDiv, setThi
 
   const navigate = useNavigate()
 
-  
+       
      const firstBtn = () => {
        setFirstDiv(true)
        setSecondDiv(false)
