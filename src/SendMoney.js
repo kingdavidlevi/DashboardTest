@@ -4,18 +4,15 @@ import Rocket from "./images/—Pngtree—rocket launch in 3d rendering_3710025.
 import Avatar from './images/vecteezy_man-avatar-clipart-illustration_9397835.png'
 import download1 from "./images/download (1).png"
 import download2 from "./images/download (2).jpeg"
+import { useState } from "react";
 function SendMoney (){
   const navigate = useNavigate()
   const {setFirstDiv, setSecondDiv,setThirdDiv,setLastDiv} = useOutletContext()
-  
+  const [tog,setTog] = useState(true)
 
-  const firstBtn = () => {
-    setFirstDiv(true)
-    setSecondDiv(false)
-       setThirdDiv(false)
-       setLastDiv(false)
-    navigate('/')
-    
+ 
+  const togg = () => {
+    setTog(prevstate => !prevstate)
   }
 
   const back = () =>{
@@ -63,14 +60,14 @@ function SendMoney (){
       </div>
 
       <section className="mt-8 xl:w-270  w-260">
-        <div className=" xl:w-270 relative my-8 bg-white py-1.5 px-1 rounded-md flex w-260">
-          <section className="grid py-1 place-items-center w-75 xl:w-90"><p className="text-base font-medium  text-gray-300">Wallet ID</p></section>
-          <section className="py-1 grid place-items-center w-75 xl:w-90 "><p className="text-base font-medium  text-gray-300">Email</p></section>
-          <section className="py-1 absolute grid place-items-center bg-green-100  w-75 xl:w-90 "><p className="text-base font-medium  text-gray-300">Email</p></section>
+        <div className=" xl:w-270 relative my-8 bg-white py-1.5 px-1 rounded-md flex w-260" >
+          <section className="grid cursor-pointer py-1 place-items-center w-75 xl:w-90" onClick={togg}><p className="text-base font-medium  text-gray-300">Wallet ID</p></section>
+          <section className="py-1 cursor-pointer grid place-items-center w-75 xl:w-90 " onClick={togg}><p className="text-base font-medium  text-gray-300">Email</p></section>
+          <section className={`${tog ? "py-1 absolute left-1 grid place-items-center bg-green-100  w-75 xl:w-90" : "py-1 absolute right-1 grid place-items-center bg-green-100  w-75 xl:w-90" }`}>{tog ? (<p className="text-base font-medium  text-gray-300">Wallet ID</p>):<p className="text-base font-medium  text-gray-300">Email</p>} </section>
         </div>
        <p className="text-base font-medium ">Enter Transaction Details</p>
-      <input placeholder="Enter Amount" className="text-white mt-5 py-3 xl:w-270 w-260 bg-white placeholder:text-gray-300 pl-3 text-sm font-medium rounded-md "  />
-      <input placeholder="Enter Receipient's Email" className="text-white mt-4 py-3 xl:w-270 w-260 bg-white placeholder:text-gray-300 pl-3 text-sm font-medium rounded-md "  />
+      <input placeholder="Enter Amount" className="text-white mt-5 outline-none py-3 xl:w-270 w-260 bg-white placeholder:text-gray-300 pl-3 text-sm font-medium rounded-md "  />
+      <input placeholder="Enter Receipient's Email" className="text-white  outline-none mt-4 py-3 xl:w-270 w-260 bg-white placeholder:text-gray-300 pl-3 text-sm font-medium rounded-md "  />
       </section>
       <button className="text-white mt-8 py-3 xl:w-270 w-260 green text-sm font-medium rounded-md "  >Continue</button>
  
