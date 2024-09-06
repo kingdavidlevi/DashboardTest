@@ -1,4 +1,4 @@
- 
+import Header from "./Header";
 import { Outlet, useOutletContext } from "react-router-dom";
 
 
@@ -7,7 +7,7 @@ function ScrollToTop() {
 
     return (
         <div className="bg-gray-100 mt-36 ">
-          
+          <Header/>
             <Outlet  context={{firstDiv,setFirstDiv,secondDiv,setSecondDiv,thirdDiv,setThirdDiv,lastDiv,setLastDiv}}/>
          </div>
     );

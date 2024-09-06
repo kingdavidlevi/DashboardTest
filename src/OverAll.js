@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Header from "./Header";
+
 import Side from "./Side";
 
 function OverAll({ title }) {
@@ -57,7 +57,7 @@ function OverAll({ title }) {
 
     return (
         <div className="bg-gray-100 w-full  overflow-hidden max-h-full overflow-y-scroll h-screen">
-          <Header/>
+          
             <Outlet context={{firstDiv,setFirstDiv,secondDiv,setSecondDiv,thirdDiv,setThirdDiv,lastDiv,setLastDiv}} />
             <Side
                 title={title}

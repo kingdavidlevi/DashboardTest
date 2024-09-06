@@ -57,21 +57,21 @@ input:focus{
     position: relative;
 }
 
-@keyframes slide-in {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  .slide-in {
-    animation: slide-in 0.5s ease-in-out forwards;
-  }
+ .moving-div{
+    transition: transform 0.3s ease-in-out;
+    transition-delay: 0.1ms;
+    
+ }
 
+
+  
+  .move-left {
+    transform: translateX(4px); /* Moves back to the left */
+  }
 .custom-checkbox input[type="checkbox"]:checked + span {
     border: none;
     background-color: #047472;
+    
 }
 
 .custom-checkbox input[type="checkbox"]:checked + span::after {
@@ -84,4 +84,19 @@ input:focus{
     border:solid   white;
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(40deg);
+}
+
+
+.move-right {
+    
+    transform: translateX(308px);
+ 
+}
+
+@media (min-width: 1280px) {
+    .move-right {
+    
+        transform: translateX(388px);
+     
+    }
 }
