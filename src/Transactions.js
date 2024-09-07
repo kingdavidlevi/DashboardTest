@@ -4,7 +4,7 @@ function Trasactions(){
     return(
         <section className="pl-72  mb-14 w-96% mt-10">
           <p className=' text-lg font-medium text-black'>Transactions</p>
-          <section className="flex py-3 pl-8 mt-3 justify-between bg-white full">
+          <section className="flex py-3 pl-8 mt-3 justify-between shadow-md bg-white full">
           <div className="  w-80 ">
             <section ><p className="text-black font-medium text-base">Recipient</p></section>
           </div>
@@ -24,7 +24,7 @@ function Trasactions(){
 
           
 
-          <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
+          <section className="flex py-4 items-center pl-8 mt-2 justify-between shadow-md bg-white full">
           <div className="  xl:w-80 lg:w-75  flex gap-4">
           <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
@@ -77,7 +77,7 @@ function Trasactions(){
           </div>
           </section>
 
-   <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
+   <section className="flex py-4 items-center pl-8 mt-2 justify-between shadow-md bg-white full">
    <div className="  xl:w-80 lg:w-75  flex gap-4">
           <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
@@ -105,7 +105,7 @@ function Trasactions(){
           </section>
           
 
-          <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
+          <section className="flex py-4 items-center pl-8 mt-2 justify-between shadow-md bg-white full">
           <div className="  xl:w-80 lg:w-75  flex gap-4">
           <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>
@@ -132,7 +132,7 @@ function Trasactions(){
           </div>
           </section>
 
-          <section className="flex py-4 items-center pl-8 mt-2 justify-between bg-white full">
+          <section className="flex py-4 items-center pl-8 mt-2 justify-between shadow-md bg-white full">
           <div className="  xl:w-80 lg:w-75  flex gap-4">
           <section className='h-10 ml-6 relative w-10 grid place-items-center cursor-pointer rounded-full bg-green-300'>
         <img src={Avatar} className=''/>

@@ -10,6 +10,7 @@ import GenerateWalletId from "./GenerateWalletId";
 import FundWallet from "./FundWallet";
 import FundingCard from "./FundingCard";
 import SendMoney from "./SendMoney";
+import Profile from "./Profile";
  import ConfirmTransaction from "./ConfirmTransaction";
  const router = createBrowserRouter(createRoutesFromElements(
  
@@ -30,7 +31,7 @@ import SendMoney from "./SendMoney";
 
 </Route>
 <Route path="Headerhomepage" element={<Headerhomepage/>}/>
-
+<Route path="Profile" element={<Profile/>}/>
 </Route>
  
   

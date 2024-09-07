@@ -75,10 +75,11 @@ function Side({ firstDiv, setFirstDiv, secondDiv, setSecondDiv, thirdDiv, setThi
         setFirstDiv(false)
         setThirdDiv(false)
         setLastDiv(true)
+        navigate('Profile')
      }
     return (
        
-        <section className="bg-white pl-7 z-20  h-full top-0   rounded-tl-md fixed left-0 w-56">
+        <section className="bg-white pl-7 z-20  h-full top-0 shadow-md  rounded-tl-md fixed left-0 w-56">
         <div className="h-28 pl-8 grid items-center   ">
         <FaAmazon className="text-4xl greentext"/>
         </div>
